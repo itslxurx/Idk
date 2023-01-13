@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Personaje : MonoBehaviour
 {
-    [SerializeField] int velocidad, alturaSalto;
     [SerializeField] Animator animator;
     [SerializeField] Rigidbody2D rigidbody;
     // Start is called before the first frame update
@@ -25,6 +24,18 @@ public class Personaje : MonoBehaviour
         else
         {
             animator.SetBool("Jump", false);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "suelo")
+        {
+            animator.SetBool("Walk", true);
+        }
+        else
+        {
+            animator.SetBool("Walk", false);
         }
     }
 }
