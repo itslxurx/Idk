@@ -101,7 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camara: {fileID: 0}
   posicionMinima: {x: 0, y: 0}
-  velocidad: 3
+  posicionInicial: {x: 0, y: 0}
+  velocidad: 0
 --- !u!50 &7777224646913379976
 Rigidbody2D:
   serializedVersion: 4
