@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Personaje : MonoBehaviour
 {
+    [SerializeField] int alturaSalto;
     [SerializeField] Animator animator;
     [SerializeField] Rigidbody2D rigidbody;
     // Start is called before the first frame update
@@ -19,11 +20,8 @@ public class Personaje : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             animator.SetBool("Jump", true);
+            rigidbody.AddForce(Vector2.up * alturaSalto);
 
-        }
-        else
-        {
-            animator.SetBool("Jump", false);
         }
     }
 
@@ -31,11 +29,14 @@ public class Personaje : MonoBehaviour
     {
         if (collision.transform.tag == "suelo")
         {
-            animator.SetBool("Walk", true);
+            animator.SetBool("Jump", false);
         }
-        else
+
+        if(collision.transform.tag == "enemigo")
         {
-            animator.SetBool("Walk", false);
+            GameManager.Instancia.Perder();
+            //Debug.Log("perder");
         }
+
     }
 }
