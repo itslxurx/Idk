@@ -68,6 +68,7 @@ public class GameManager : MonoBehaviour
         tiempo = 0;
         cronometro = true;
         moverElemento.IniciarEnemigo();
+
     }
 
     public void ActualizarPuntuacion(int puntos)
