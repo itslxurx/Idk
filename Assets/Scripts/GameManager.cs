@@ -46,11 +46,11 @@ public class GameManager : MonoBehaviour
 
     public void ActualizarPuntuacion(int puntos)
     {
-        Debug.Log("no se");
+        Debug.Log(puntuacionActual);
         puntuacionActual += 1;
         if(puntuacionActual> puntuacionMaxima)
         {
-            puntuacionActual = puntuacionMaxima;
+            puntuacionMaxima = puntuacionActual;
             PlayerPrefs.SetInt("mejorPuntuacion", puntuacionMaxima);
         }
     }
