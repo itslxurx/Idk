@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject enemigo;
     [SerializeField] bool cronometro;
     [SerializeField] TMP_Text textoTiempo;
+    [SerializeField] MoverElemento moverElemento;
     // Start is called before the first frame update
 
     private void Awake()
@@ -66,7 +67,7 @@ public class GameManager : MonoBehaviour
         boton.SetActive(false);
         tiempo = 0;
         cronometro = true;
-        GameManager.Instancia.IniciarEnemigo();
+        moverElemento.IniciarEnemigo();
     }
 
     public void ActualizarPuntuacion(int puntos)

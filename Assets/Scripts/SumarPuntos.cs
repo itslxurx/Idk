@@ -8,9 +8,9 @@ public class SumarPuntos : MonoBehaviour
     {
         if (collision.transform.tag == "enemigo")
         {
-            Debug.Log("Hola");
+            
             GameManager.Instancia.ActualizarPuntuacion(1);
-            Debug.Log("Hola");
+            
         }
     }
 }

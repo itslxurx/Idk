@@ -35,8 +35,10 @@ public class Personaje : MonoBehaviour
         if(collision.transform.tag == "enemigo")
         {
             GameManager.Instancia.Perder();
-            //Debug.Log("perder");
+            Debug.Log("perder");
         }
 
     }
+
+
 }

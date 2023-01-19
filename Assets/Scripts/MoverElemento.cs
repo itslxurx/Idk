@@ -25,4 +25,10 @@ public class MoverElemento : MonoBehaviour
             velocidad = velocidad + 0.5f;
         }
     }
+
+    public void IniciarEnemigo()
+    {
+        transform.position = posicionInicial;
+        velocidad = 2;
+    }
 }
