@@ -442,7 +442,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Reiniciar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -689,6 +689,37 @@ MonoBehaviour:
   alturaSalto: 500
   animator: {fileID: 0}
   rigidbody: {fileID: 0}
+--- !u!1 &340296952
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 340296953}
+  m_Layer: 0
+  m_Name: GameOver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &340296953
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340296952}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 446.10135, y: 316.74216, z: -1.7762153}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &372008684
 GameObject:
   m_ObjectHideFlags: 0
@@ -889,6 +920,13 @@ MonoBehaviour:
   puntuacionActual: 0
   puntuacionMaxima: 0
   tiempo: 0
+  gameOver: {fileID: 1313197472}
+  boton: {fileID: 1268813731}
+  jugador: {fileID: 261682616}
+  enemigo: {fileID: 1137874758}
+  cronometro: 1
+  textoTiempo: {fileID: 2109782579}
+  moverElemento: {fileID: 1137874757}
 --- !u!4 &791796989
 Transform:
   m_ObjectHideFlags: 0
@@ -1024,7 +1062,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puntuacionActual: {fileID: 1927002607}
   puntuacionMaxima: {fileID: 973863682}
-  tiempo: {fileID: 0}
+  tiempo: {fileID: 2109782579}
 --- !u!1 &917722550
 GameObject:
   m_ObjectHideFlags: 0
@@ -1485,6 +1523,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5d36248a4f7b34408c7987b3bd3be27, type: 3}
+--- !u!114 &1137874757 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3605096517314750557, guid: a5d36248a4f7b34408c7987b3bd3be27, type: 3}
+  m_PrefabInstance: {fileID: 1137874756}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137874758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce147b7d314ace94584ba59b2b48b5a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1137874758 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4002889110974833478, guid: a5d36248a4f7b34408c7987b3bd3be27, type: 3}
+  m_PrefabInstance: {fileID: 1137874756}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1268813731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1568,7 +1622,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1268813734}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 791796988}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: ReiniciarJuego
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1268813734
 MonoBehaviour:
   m_ObjectHideFlags: 0

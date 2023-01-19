@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instancia;
     [SerializeField] public int puntuacionActual, puntuacionMaxima;
-    [SerializeField] float tiempo;
+    [SerializeField] public float tiempo;
     [SerializeField] GameObject gameOver;
     [SerializeField] GameObject boton;
     [SerializeField] GameObject jugador;
@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         if (cronometro == true)
         {
@@ -81,4 +81,6 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt("mejorPuntuacion", puntuacionMaxima);
         }
     }
+
+
 }
